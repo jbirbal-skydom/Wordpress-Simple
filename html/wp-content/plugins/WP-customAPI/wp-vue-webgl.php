@@ -37,8 +37,8 @@ function unity3d_embed_webgl_function($atts = array())
     // Unwrap the shortcode attributes, substituting the given defaults for any undefined attributes
     $args = shortcode_atts(
         array(
-            'width' => '960',
-            'height' => '600',
+            'width' => '100',
+            'height' => '100',
         ),
         $atts
     );
@@ -56,7 +56,7 @@ function unity3d_embed_webgl_function($atts = array())
 
 
     // returns the game window html code
-    return '<div id="app" style="width: ' . $width . 'px; height: ' . $height . 'px; margin: auto"></div>';
+    return '<div id="app" style="width: ' . $width . '%; height: ' . $height . '%; margin: auto; overflow: auto;"></div>';
 }
 
 add_shortcode('unity3d_embed_webgl', 'unity3d_embed_webgl_function');
