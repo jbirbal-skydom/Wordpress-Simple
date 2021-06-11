@@ -9,9 +9,9 @@ services:
       - 8080:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
+      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
+      WORDPRESS_DB_NAME: main
     volumes:
      - landing:/var/www/html
     # - ./html:/var/www/html/
@@ -23,9 +23,9 @@ services:
       - 8081:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
+      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
+      WORDPRESS_DB_NAME: main
     volumes:
       - cnc:/var/www/html
     # - ./html:/var/www/html/
@@ -37,9 +37,9 @@ services:
       - 8082:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
+      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
+      WORDPRESS_DB_NAME: main
     volumes:
       - shop:/var/www/html
     # - ./html:/var/www/html/
@@ -51,9 +51,9 @@ services:
       - 8083:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
+      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
+      WORDPRESS_DB_NAME: main
     volumes:
       - learn:/var/www/html
     # - ./html:/var/www/html/
@@ -65,9 +65,9 @@ services:
       - 8084:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
+      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
+      WORDPRESS_DB_NAME: main
     volumes:
       - project:/var/www/html
     # - ./html:/var/www/html/
@@ -78,9 +78,9 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
+      MYSQL_DATABASE: main
+      MYSQL_USER: Gp8Ajj4BmjXK6hq
+      MYSQL_PASSWORD: X9dZFKCJKLZ8acH
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     ports:
       - 3306
