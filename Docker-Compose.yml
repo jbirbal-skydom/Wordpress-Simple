@@ -2,21 +2,79 @@ version: '3.1'
 
 services:
 
-  wordpress:
+  landing_wordpress:
     image: wordpress
     restart: always
     ports:
       - 8080:80
     environment:
-      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: exampleuser
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
     volumes:
-     - wordpress:/var/www/html
+     - landing:/var/www/html
     # - ./html:/var/www/html/
 
-  db:
+  cnc_wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      WORDPRESS_DB_HOST: db_skydom
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: examplepass
+      WORDPRESS_DB_NAME: exampledb
+    volumes:
+      - cnc:/var/www/html
+    # - ./html:/var/www/html/
+
+  shop_wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8082:80
+    environment:
+      WORDPRESS_DB_HOST: db_skydom
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: examplepass
+      WORDPRESS_DB_NAME: exampledb
+    volumes:
+      - shop:/var/www/html
+    # - ./html:/var/www/html/
+
+  learn_wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8083:80
+    environment:
+      WORDPRESS_DB_HOST: db_skydom
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: examplepass
+      WORDPRESS_DB_NAME: exampledb
+    volumes:
+      - learn:/var/www/html
+    # - ./html:/var/www/html/
+
+  project_wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8084:80
+    environment:
+      WORDPRESS_DB_HOST: db_skydom
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: examplepass
+      WORDPRESS_DB_NAME: exampledb
+    volumes:
+      - project:/var/www/html
+    # - ./html:/var/www/html/
+
+
+
+  db_skydom:
     image: mysql:5.7
     restart: always
     environment:
@@ -27,19 +85,31 @@ services:
     ports:
       - 3306
     volumes:
-      - db:/var/lib/mysql
+      - db_skydom:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin
     restart: always
     depends_on:
-      - db
+      - db_skydom
     environment:
       PMA_ARBITRARY: 1
     ports:
       - 8183:80
 
 volumes:
-  wordpress:
-  db:
+  landing:
+  cnc:
+  shop:
+  learn:
+  project:
+  db_skydom:
     # start with: docker-compose -f stack.yml up
+
+    # copy files to PC 
+    #docker cp wordpress-simple_landing_wordpress_1:/var/www/html Landing\  
+    #docker cp wordpress-simple_project_wordpress_1:/var/www/html Project\  
+    #docker cp wordpress-simple_learn_wordpress_1:/var/www/html Learn\  
+    #docker cp wordpress-simple_shop_wordpress_1:/var/www/html Shop\ 
+    #docker cp wordpress-simple_cnc_wordpress_1:/var/www/html CNC\   
+    #
