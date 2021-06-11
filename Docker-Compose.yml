@@ -13,8 +13,8 @@ services:
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
     volumes:
-      # - wordpress:/var/www/html
-     - ./html:/var/www/html/
+     - wordpress:/var/www/html
+    # - ./html:/var/www/html/
 
   db:
     image: mysql:5.7
@@ -40,6 +40,6 @@ services:
       - 8183:80
 
 volumes:
-  # wordpress:
+  wordpress:
   db:
     # start with: docker-compose -f stack.yml up
