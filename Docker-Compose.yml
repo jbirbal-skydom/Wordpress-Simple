@@ -6,7 +6,7 @@ services:
     image: wordpress
     restart: always
     ports:
-      - 8080:80
+      - 8090:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
@@ -29,7 +29,7 @@ services:
     image: wordpress
     restart: always
     ports:
-      - 8081:80
+      - 8092:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
@@ -52,7 +52,7 @@ services:
     image: wordpress
     restart: always
     ports:
-      - 8082:80
+      - 8094:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
@@ -75,7 +75,7 @@ services:
     image: wordpress
     restart: always
     ports:
-      - 8083:80
+      - 8096:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
@@ -98,7 +98,7 @@ services:
     image: wordpress
     restart: always
     ports:
-      - 8084:80
+      - 8098:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
