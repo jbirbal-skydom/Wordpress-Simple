@@ -12,7 +12,16 @@ services:
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
       WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
       WORDPRESS_DB_NAME: main
-    volumes:
+      WORDPRESS_TABLE_PREFIX: 'landing_'
+      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
+      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
+      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
+      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
+      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
+      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
+      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
+      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
+    volumes:  
      - landing:/var/www/html
     # - ./html:/var/www/html/
 
@@ -26,6 +35,15 @@ services:
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
       WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
       WORDPRESS_DB_NAME: main
+      WORDPRESS_TABLE_PREFIX: cnc_
+      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
+      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
+      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
+      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
+      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
+      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
+      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
+      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
     volumes:
       - cnc:/var/www/html
     # - ./html:/var/www/html/
@@ -40,6 +58,15 @@ services:
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
       WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
       WORDPRESS_DB_NAME: main
+      WORDPRESS_TABLE_PREFIX: shop_
+      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
+      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
+      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
+      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
+      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
+      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
+      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
+      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
     volumes:
       - shop:/var/www/html
     # - ./html:/var/www/html/
@@ -54,6 +81,15 @@ services:
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
       WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
       WORDPRESS_DB_NAME: main
+      WORDPRESS_TABLE_PREFIX: learn_
+      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
+      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
+      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
+      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
+      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
+      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
+      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
+      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
     volumes:
       - learn:/var/www/html
     # - ./html:/var/www/html/
@@ -68,6 +104,15 @@ services:
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
       WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
       WORDPRESS_DB_NAME: main
+      WORDPRESS_TABLE_PREFIX: project_
+      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
+      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
+      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
+      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
+      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
+      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
+      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
+      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
     volumes:
       - project:/var/www/html
     # - ./html:/var/www/html/
