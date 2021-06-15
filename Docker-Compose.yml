@@ -1,4 +1,16 @@
 version: '3.1'
+networks:
+  frontend:
+    external: true
+    name: npm_frontend
+  backend:
+    external: true
+    name: npm_backend
+  main:
+    external: true
+    name: npm_main
+
+
 
 services:
 
@@ -21,9 +33,21 @@ services:
       WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
       WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
       WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
+      WORDPRESS_CONFIG_EXTRA: 
+        # define('CUSTOM_USER_TABLE', 'landing_users');
+        # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
+        # define( 'COOKIE_DOMAIN', 'srd-test.ml' ); 
+        # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
+        # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
+        # define( ‘COOKIEPATH’, ‘/’ );
+        # define( ‘SITECOOKIEPATH’, ‘/’ );
     volumes:  
      - landing:/var/www/html
     # - ./html:/var/www/html/
+    networks:
+      - frontend
+      - backend
+
 
   cnc_wordpress:
     image: wordpress
@@ -44,9 +68,21 @@ services:
       WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
       WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
       WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
+      WORDPRESS_CONFIG_EXTRA: 
+        # define('CUSTOM_USER_TABLE', 'landing_users');
+        # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
+        # define( 'COOKIE_DOMAIN', 'srd-test.ml' ); 
+        # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
+        # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
+        # define( ‘COOKIEPATH’, ‘/’ );
+        # define( ‘SITECOOKIEPATH’, ‘/’ );
     volumes:
       - cnc:/var/www/html
     # - ./html:/var/www/html/
+    networks:
+      - frontend
+      - backend
+
 
   shop_wordpress:
     image: wordpress
@@ -67,56 +103,79 @@ services:
       WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
       WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
       WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
+      WORDPRESS_CONFIG_EXTRA: 
+        # define('CUSTOM_USER_TABLE', 'landing_users');
+        # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
+        # define( 'COOKIE_DOMAIN', 'srd-test.com' ); 
+        # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
+        # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
+        # define( ‘COOKIEPATH’, ‘/’ );
+        # define( ‘SITECOOKIEPATH’, ‘/’ );
     volumes:
       - shop:/var/www/html
     # - ./html:/var/www/html/
+    networks:
+      - frontend
+      - backend
 
-  learn_wordpress:
-    image: wordpress
-    restart: always
-    ports:
-      - 8096:80
-    environment:
-      WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
-      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
-      WORDPRESS_DB_NAME: main
-      WORDPRESS_TABLE_PREFIX: learn_
-      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
-      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
-      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
-      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
-      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
-      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
-      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
-      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
-    volumes:
-      - learn:/var/www/html
-    # - ./html:/var/www/html/
+  # learn_wordpress:
+  #   image: wordpress
+  #   restart: always
+  #   ports:
+  #     - 8096:80
+  #   environment:
+  #     WORDPRESS_DB_HOST: db_skydom
+  #     WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
+  #     WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
+  #     WORDPRESS_DB_NAME: main
+  #     WORDPRESS_TABLE_PREFIX: learn_
+  #     WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
+  #     WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
+  #     WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
+  #     WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
+  #     WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
+  #     WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
+  #     WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
+  #     WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
+  #     WORDPRESS_CONFIG_EXTRA: 
+  #       define('CUSTOM_USER_TABLE', 'landing_users');
+  #       define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
+  #   volumes:
+  #     - learn:/var/www/html
+  #   # - ./html:/var/www/html/
+  #   networks:
+  #     - frontend
+  #     - backend
 
-  project_wordpress:
-    image: wordpress
-    restart: always
-    ports:
-      - 8098:80
-    environment:
-      WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
-      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
-      WORDPRESS_DB_NAME: main
-      WORDPRESS_TABLE_PREFIX: project_
-      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
-      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
-      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
-      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
-      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
-      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
-      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
-      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
-    volumes:
-      - project:/var/www/html
-    # - ./html:/var/www/html/
 
+  # project_wordpress:
+  #   image: wordpress
+  #   restart: always
+  #   ports:
+  #     - 8098:80
+  #   environment:
+  #     WORDPRESS_DB_HOST: db_skydom
+  #     WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
+  #     WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
+  #     WORDPRESS_DB_NAME: main
+  #     WORDPRESS_TABLE_PREFIX: project_
+  #     WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
+  #     WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
+  #     WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
+  #     WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
+  #     WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
+  #     WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
+  #     WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
+  #     WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
+  #     WORDPRESS_CONFIG_EXTRA: 
+  #       define('CUSTOM_USER_TABLE', 'landing_users');
+  #       define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
+  #   volumes:
+  #     - project:/var/www/html
+  #   # - ./html:/var/www/html/
+  #   networks:
+  #     - frontend
+  #     - backend
 
 
   db_skydom:
@@ -131,6 +190,9 @@ services:
       - 3306
     volumes:
       - db_skydom:/var/lib/mysql
+    networks:
+      - backend
+  
 
   phpmyadmin:
     image: phpmyadmin
@@ -141,6 +203,13 @@ services:
       PMA_ARBITRARY: 1
     ports:
       - 8183:80
+    networks:
+      - backend
+      - main
+
+
+
+
 
 volumes:
   landing:
@@ -149,6 +218,9 @@ volumes:
   learn:
   project:
   db_skydom:
+
+
+
     # start with: docker-compose -f stack.yml up
 
     # copy files to PC 
@@ -156,5 +228,7 @@ volumes:
     #docker cp wordpress-simple_project_wordpress_1:/var/www/html Project\  
     #docker cp wordpress-simple_learn_wordpress_1:/var/www/html Learn\  
     #docker cp wordpress-simple_shop_wordpress_1:/var/www/html Shop\ 
-    #docker cp wordpress-simple_cnc_wordpress_1:/var/www/html CNC\   
-    #
+    #docker cp wordpress-simple_cnc_wordpress_1:/var/www/html CNC\  
+
+   
+

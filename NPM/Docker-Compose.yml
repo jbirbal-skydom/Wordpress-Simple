@@ -1,26 +1,37 @@
 version: "3.1"
+
+networks:
+  frontend:
+  backend:
+  main:
+
 services:
-  netdata:
-    image: netdata/netdata
-    container_name: netdata
-    hostname: example.com # set to fqdn of host
-    ports:
-        - 19999:19999
-    restart: unless-stopped
-    cap_add:
-        - SYS_PTRACE
-    security_opt:
-        - apparmor:unconfined
-    volumes:
-        - netdataconfig:/etc/netdata
-        - netdatalib:/var/lib/netdata
-        - netdatacache:/var/cache/netdata
-        - /etc/passwd:/host/etc/passwd:ro
-        - /etc/group:/host/etc/group:ro
-        - /proc:/host/proc:ro
-        - /sys:/host/sys:ro
-        - /etc/os-release:/host/etc/os-release:ro
-  app:
+  # netdata:
+  #   image: netdata/netdata
+  #   container_name: netdata
+  #   hostname: example.com # set to fqdn of host
+  #   ports:
+  #       - 19999:19999
+  #   restart: unless-stopped
+  #   cap_add:
+  #       - SYS_PTRACE
+  #   security_opt:
+  #       - apparmor:unconfined
+  #   volumes:
+  #       - netdataconfig:/etc/netdata
+  #       - netdatalib:/var/lib/netdata
+  #       - netdatacache:/var/cache/netdata
+  #       - /etc/passwd:/host/etc/passwd:ro
+  #       - /etc/group:/host/etc/group:ro
+  #       - /proc:/host/proc:ro
+  #       - /sys:/host/sys:ro
+  #       - /etc/os-release:/host/etc/os-release:ro
+  #   networks:
+  #     - backend
+  #     - main
+
+
+  npm:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: always
     ports:
@@ -49,6 +60,14 @@ services:
       - letsencrypt_npm:/etc/letsencrypt
     depends_on:
       - db_npm
+    networks:
+      - frontend
+      - backend
+      - main
+
+
+
+
   db_npm:
     image: 'jc21/mariadb-aria:latest'
     restart: always
@@ -59,16 +78,20 @@ services:
       MYSQL_PASSWORD: 'WLdwSNvakUTzTHKTyvUt'
     volumes:
       -  db_npm:/var/lib/mysql
+    networks:
+      - backend
+
 
 volumes:
     db_npm:
     data_npm:
     letsencrypt_npm:
-    netdataconfig:
-    netdatalib:
-    netdatacache:
+    # netdataconfig:
+    # netdatalib:
+    # netdatacache:
 
 # ----------------- Note, that the NGINX proxy manager is running in a docker container, 
 #                   so using the IP address 127.0.0.1 
 #                   will NOT refer to the host OS IP address, 
 #                   but the container’s internal address.
+ #                       ufw allow [port]19999
