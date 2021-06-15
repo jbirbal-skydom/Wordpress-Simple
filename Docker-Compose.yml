@@ -14,25 +14,25 @@ networks:
 
 services:
 
-  landing_wordpress:
+  RHS_wordpress:
     image: wordpress
     restart: always
     ports:
-      - 8090:80
+      - 9080:80
     environment:
-      WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
-      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
+      WORDPRESS_DB_HOST: db_RHS
+      WORDPRESS_DB_USER: 'mv|]IVvu?AKeoJ42n_^dBsW!7%c,6;^0fHaU!q~x/2HMou9M)|^TJFoxi`.NjDT*'
+      WORDPRESS_DB_PASSWORD: 'SnJ|XD|zbd2^hQwVboQo_{w1JoF#&?hek)7t(dq!p?+-5/@<8`j--V?Nb2t@S#g]'
       WORDPRESS_DB_NAME: main
-      WORDPRESS_TABLE_PREFIX: 'landing_'
-      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
-      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
-      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
-      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
-      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
-      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
-      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
-      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
+      WORDPRESS_TABLE_PREFIX: 'RHS_'
+      WORDPRESS_AUTH_KEY:         'YQPf2!e/;}79GD6BED#9t( +=Nrt>3v.a&,.f~-b_5y<2>?D-NJ,DrOZwPCx6<>>'
+      WORDPRESS_SECURE_AUTH_KEY:  'i8[_~:;#C7oE+nU`.GS/Ur%lVi)%>QZ&OAyJSDgZy/g|,7jG$^Vo3m],b+?X,ZF*'
+      WORDPRESS_LOGGED_IN_KEY:    'OTyJ9u#||b~P:NU1kvWU&|.2+b![/h{<#?C~Q0?g-lJR.T@+sT4/h;*cjoQDtTum'
+      WORDPRESS_NONCE_KEY:        'xr`W08|T|I-5.+O~6fb|Me~x#PWTR{LSa+]_1bv4.9G|o}<`PKZQmMj[Fo5BhScM'
+      WORDPRESS_AUTH_SALT:        'NMuGTC79C5a;_fK,/K{D{8VV6d0Y#yZR~{WbBG)x@Xiuo7QH~/bhKV)9>u[.5oHV'
+      WORDPRESS_SECURE_AUTH_SALT: 'x4}y.v`}%d,PNp`ue+*,eyrbWQcEKL%@f! T2a;ILqtj~]L)+QL~*MtBMgCrj1zg'
+      WORDPRESS_LOGGED_IN_SALT:   '`.3`cCsHIPmr UaESje[2t%=xo!{xE-?4r-1IxVcuP}2dWl(L,lvC>*3BbT|2{EA'
+      WORDPRESS_NONCE_SALT:       'aRB*|ghSkr`H<fV]2kT1$PAH9i;1T ;}<MVCO{`]gP|p*E`W.v/xZ3_|xBd^~%H;'
       WORDPRESS_CONFIG_EXTRA: 
         # define('CUSTOM_USER_TABLE', 'landing_users');
         # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
@@ -42,150 +42,24 @@ services:
         # define( ‘COOKIEPATH’, ‘/’ );
         # define( ‘SITECOOKIEPATH’, ‘/’ );
     volumes:  
-     - landing:/var/www/html
+     - RHS:/var/www/html
     # - ./html:/var/www/html/
     networks:
       - frontend
       - backend
 
 
-  cnc_wordpress:
-    image: wordpress
-    restart: always
-    ports:
-      - 8092:80
-    environment:
-      WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
-      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
-      WORDPRESS_DB_NAME: main
-      WORDPRESS_TABLE_PREFIX: cnc_
-      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
-      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
-      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
-      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
-      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
-      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
-      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
-      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
-      WORDPRESS_CONFIG_EXTRA: 
-        # define('CUSTOM_USER_TABLE', 'landing_users');
-        # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
-        # define( 'COOKIE_DOMAIN', 'srd-test.ml' ); 
-        # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
-        # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
-        # define( ‘COOKIEPATH’, ‘/’ );
-        # define( ‘SITECOOKIEPATH’, ‘/’ );
-    volumes:
-      - cnc:/var/www/html
-    # - ./html:/var/www/html/
-    networks:
-      - frontend
-      - backend
+  
 
 
-  shop_wordpress:
-    image: wordpress
-    restart: always
-    ports:
-      - 8094:80
-    environment:
-      WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
-      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
-      WORDPRESS_DB_NAME: main
-      WORDPRESS_TABLE_PREFIX: shop_
-      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
-      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
-      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
-      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
-      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
-      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
-      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
-      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
-      WORDPRESS_CONFIG_EXTRA: 
-        # define('CUSTOM_USER_TABLE', 'landing_users');
-        # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
-        # define( 'COOKIE_DOMAIN', 'srd-test.com' ); 
-        # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
-        # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
-        # define( ‘COOKIEPATH’, ‘/’ );
-        # define( ‘SITECOOKIEPATH’, ‘/’ );
-    volumes:
-      - shop:/var/www/html
-    # - ./html:/var/www/html/
-    networks:
-      - frontend
-      - backend
-
-  # learn_wordpress:
-  #   image: wordpress
-  #   restart: always
-  #   ports:
-  #     - 8096:80
-  #   environment:
-  #     WORDPRESS_DB_HOST: db_skydom
-  #     WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
-  #     WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
-  #     WORDPRESS_DB_NAME: main
-  #     WORDPRESS_TABLE_PREFIX: learn_
-  #     WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
-  #     WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
-  #     WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
-  #     WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
-  #     WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
-  #     WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
-  #     WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
-  #     WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
-  #     WORDPRESS_CONFIG_EXTRA: 
-  #       define('CUSTOM_USER_TABLE', 'landing_users');
-  #       define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
-  #   volumes:
-  #     - learn:/var/www/html
-  #   # - ./html:/var/www/html/
-  #   networks:
-  #     - frontend
-  #     - backend
-
-
-  # project_wordpress:
-  #   image: wordpress
-  #   restart: always
-  #   ports:
-  #     - 8098:80
-  #   environment:
-  #     WORDPRESS_DB_HOST: db_skydom
-  #     WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
-  #     WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
-  #     WORDPRESS_DB_NAME: main
-  #     WORDPRESS_TABLE_PREFIX: project_
-  #     WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
-  #     WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
-  #     WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
-  #     WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
-  #     WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
-  #     WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
-  #     WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
-  #     WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
-  #     WORDPRESS_CONFIG_EXTRA: 
-  #       define('CUSTOM_USER_TABLE', 'landing_users');
-  #       define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
-  #   volumes:
-  #     - project:/var/www/html
-  #   # - ./html:/var/www/html/
-  #   networks:
-  #     - frontend
-  #     - backend
-
-
-  db_skydom:
+  db_RHS:
     image: mysql:5.7
     restart: always
     environment:
       MYSQL_DATABASE: main
-      MYSQL_USER: Gp8Ajj4BmjXK6hq
-      MYSQL_PASSWORD: X9dZFKCJKLZ8acH
-      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+      MYSQL_USER: 'mv|]IVvu?AKeoJ42n_^dBsW!7%c,6;^0fHaU!q~x/2HMou9M)|^TJFoxi`.NjDT*'
+      MYSQL_PASSWORD: 'SnJ|XD|zbd2^hQwVboQo_{w1JoF#&?hek)7t(dq!p?+-5/@<8`j--V?Nb2t@S#g]'
+      MYSQL_RANDOM_ROOT_PASSWORD: 'iritFDqKK7wYg|x}/m}vl:W7hS58Zv]7A6@<;za4FPw9~eAs]@H=,|~F&Pk6`1/&'
     ports:
       - 3306
     volumes:
@@ -194,30 +68,9 @@ services:
       - backend
   
 
-  phpmyadmin:
-    image: phpmyadmin
-    restart: always
-    depends_on:
-      - db_skydom
-    environment:
-      PMA_ARBITRARY: 1
-    ports:
-      - 8183:80
-    networks:
-      - backend
-      - main
-
-
-
-
-
 volumes:
-  landing:
-  cnc:
-  shop:
-  learn:
-  project:
-  db_skydom:
+  RHS:
+  db_RHS:
 
 
 
