@@ -21,8 +21,8 @@ services:
       - 9080:80
     environment:
       WORDPRESS_DB_HOST: db_RHS
-      WORDPRESS_DB_USER: 'mv|]IVvu?AKeoJ42n_^dBsW!7%c,6;^0fHaU!q~x/2HMou9M)|^TJFoxi`.NjDT*'
-      WORDPRESS_DB_PASSWORD: 'SnJ|XD|zbd2^hQwVboQo_{w1JoF#&?hek)7t(dq!p?+-5/@<8`j--V?Nb2t@S#g]'
+      WORDPRESS_DB_USER: 'IVvuAKeoJ42ndBsW6'
+      WORDPRESS_DB_PASSWORD: 'SnJzbd2hQwVboQo'
       WORDPRESS_DB_NAME: main
       WORDPRESS_TABLE_PREFIX: 'RHS_'
       WORDPRESS_AUTH_KEY:         'YQPf2!e/;}79GD6BED#9t( +=Nrt>3v.a&,.f~-b_5y<2>?D-NJ,DrOZwPCx6<>>'
@@ -57,9 +57,9 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: main
-      MYSQL_USER: 'mv|]IVvu?AKeoJ42n_^dBsW!7%c,6;^0fHaU!q~x/2HMou9M)|^TJFoxi`.NjDT*'
-      MYSQL_PASSWORD: 'SnJ|XD|zbd2^hQwVboQo_{w1JoF#&?hek)7t(dq!p?+-5/@<8`j--V?Nb2t@S#g]'
-      MYSQL_RANDOM_ROOT_PASSWORD: 'iritFDqKK7wYg|x}/m}vl:W7hS58Zv]7A6@<;za4FPw9~eAs]@H=,|~F&Pk6`1/&'
+      MYSQL_USER: 'IVvuAKeoJ42ndBsW6'
+      MYSQL_PASSWORD: 'SnJzbd2hQwVboQo'
+      MYSQL_RANDOM_ROOT_PASSWORD: 'iritFDqKK7wYg'
     ports:
       - 9036
     volumes:
