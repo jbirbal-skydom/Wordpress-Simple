@@ -26,13 +26,13 @@ services:
       WORDPRESS_DB_NAME: main
       WORDPRESS_TABLE_PREFIX: 'RHS_'
       WORDPRESS_AUTH_KEY:         'YQPf2!e/;}79GD6BED#9t( +=Nrt>3v.a&,.f~-b_5y<2>?D-NJ,DrOZwPCx6<>>'
-      WORDPRESS_SECURE_AUTH_KEY:  'i8[_~:;#C7oE+nU`.GS/Ur%lVi)%>QZ&OAyJSDgZy/g|,7jG$^Vo3m],b+?X,ZF*'
+      WORDPRESS_SECURE_AUTH_KEY:  'i8[_~:;#C7oE+nU`.GS/Ur%lVi)%>QZ&OAyJSDgZy/g|,7jGp^Vo3m],b+?X,ZF*'
       WORDPRESS_LOGGED_IN_KEY:    'OTyJ9u#||b~P:NU1kvWU&|.2+b![/h{<#?C~Q0?g-lJR.T@+sT4/h;*cjoQDtTum'
       WORDPRESS_NONCE_KEY:        'xr`W08|T|I-5.+O~6fb|Me~x#PWTR{LSa+]_1bv4.9G|o}<`PKZQmMj[Fo5BhScM'
       WORDPRESS_AUTH_SALT:        'NMuGTC79C5a;_fK,/K{D{8VV6d0Y#yZR~{WbBG)x@Xiuo7QH~/bhKV)9>u[.5oHV'
       WORDPRESS_SECURE_AUTH_SALT: 'x4}y.v`}%d,PNp`ue+*,eyrbWQcEKL%@f! T2a;ILqtj~]L)+QL~*MtBMgCrj1zg'
       WORDPRESS_LOGGED_IN_SALT:   '`.3`cCsHIPmr UaESje[2t%=xo!{xE-?4r-1IxVcuP}2dWl(L,lvC>*3BbT|2{EA'
-      WORDPRESS_NONCE_SALT:       'aRB*|ghSkr`H<fV]2kT1$PAH9i;1T ;}<MVCO{`]gP|p*E`W.v/xZ3_|xBd^~%H;'
+      WORDPRESS_NONCE_SALT:       'aRB*|ghSkr`H<fV]2kT19PAH9i;1T ;}<MVCO{`]gP|p*E`W.v/xZ3_|xBd^~%H;'
       WORDPRESS_CONFIG_EXTRA: 
         # define('CUSTOM_USER_TABLE', 'landing_users');
         # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
