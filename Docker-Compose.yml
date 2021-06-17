@@ -34,8 +34,8 @@ services:
       WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
       WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
       WORDPRESS_CONFIG_EXTRA: 
-         define('CUSTOM_USER_TABLE', 'landing_users');
-         define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
+        # define('CUSTOM_USER_TABLE', 'landing_users');
+        # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
         # define( 'COOKIE_DOMAIN', 'srd-test.ml' ); 
         # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
         # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
@@ -69,8 +69,8 @@ services:
       WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
       WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
       WORDPRESS_CONFIG_EXTRA: 
-         define('CUSTOM_USER_TABLE', 'landing_users');
-         define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
+        # define('CUSTOM_USER_TABLE', 'landing_users');
+        # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
         # define( 'COOKIE_DOMAIN', 'srd-test.ml' ); 
         # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
         # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
@@ -104,8 +104,8 @@ services:
       WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
       WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
       WORDPRESS_CONFIG_EXTRA: 
-         define('CUSTOM_USER_TABLE', 'landing_users');
-         define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
+        # define('CUSTOM_USER_TABLE', 'landing_users');
+        # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
         # define( 'COOKIE_DOMAIN', 'srd-test.com' ); 
         # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
         # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
