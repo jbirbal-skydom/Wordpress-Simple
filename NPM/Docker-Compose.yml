@@ -30,7 +30,17 @@ services:
   #     - backend
   #     - main
 
-
+  phpmyadmin:
+      image: phpmyadmin
+      restart: always
+      environment:
+        PMA_ARBITRARY: 1
+      ports:
+        - 8183:80
+      networks:
+        - backend
+        - main
+  
   npm:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: always

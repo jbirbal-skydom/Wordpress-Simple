@@ -194,20 +194,18 @@ services:
       - backend
   
 
-  phpmyadmin:
-    image: phpmyadmin
-    restart: always
-    depends_on:
-      - db_skydom
-    environment:
-      PMA_ARBITRARY: 1
-    ports:
-      - 8183:80
-    networks:
-      - backend
-      - main
-
-
+  # phpmyadmin:
+  #   image: phpmyadmin
+  #   restart: always
+  #   depends_on:
+  #     - db_skydom
+  #   environment:
+  #     PMA_ARBITRARY: 1
+  #   ports:
+  #     - 8183:80
+  #   networks:
+  #     - backend
+  #     - main
 
 
 
