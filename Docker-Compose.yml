@@ -61,7 +61,7 @@ services:
       MYSQL_PASSWORD: 'SnJ|XD|zbd2^hQwVboQo_{w1JoF#&?hek)7t(dq!p?+-5/@<8`j--V?Nb2t@S#g]'
       MYSQL_RANDOM_ROOT_PASSWORD: 'iritFDqKK7wYg|x}/m}vl:W7hS58Zv]7A6@<;za4FPw9~eAs]@H=,|~F&Pk6`1/&'
     ports:
-      - 3306
+      - 9036
     volumes:
       - db_skydom:/var/lib/mysql
     networks:
