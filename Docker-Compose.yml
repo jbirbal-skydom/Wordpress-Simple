@@ -63,7 +63,7 @@ services:
     ports:
       - 9036
     volumes:
-      - db_skydom:/var/lib/mysql
+      - db_RHS:/var/lib/mysql
     networks:
       - backend
   
