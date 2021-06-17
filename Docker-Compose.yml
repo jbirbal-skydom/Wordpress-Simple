@@ -33,7 +33,12 @@ services:
       WORDPRESS_SECURE_AUTH_SALT: 'x4}y.v`}%d,PNp`ue+*,eyrbWQcEKL%@f! T2a;ILqtj~]L)+QL~*MtBMgCrj1zg'
       WORDPRESS_LOGGED_IN_SALT:   '`.3`cCsHIPmr UaESje[2t%=xo!{xE-?4r-1IxVcuP}2dWl(L,lvC>*3BbT|2{EA'
       WORDPRESS_NONCE_SALT:       'aRB*|ghSkr`H<fV]2kT19PAH9i;1T ;}<MVCO{`]gP|p*E`W.v/xZ3_|xBd^~%H;'
-      WORDPRESS_CONFIG_EXTRA: 
+      WORDPRESS_CONFIG_EXTRA:
+        define( 'WP_HOME', 'https://RHS2012.ml' );
+        
+        define( 'WP_SITEURL', 'https://RHS2012.ml' );
+        
+      
         # define('CUSTOM_USER_TABLE', 'landing_users');
         # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
         # define( 'COOKIE_DOMAIN', 'srd-test.ml' ); 
