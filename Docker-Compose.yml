@@ -6,9 +6,9 @@ networks:
   backend:
     external: true
     name: npm_backend
-  main:
-    external: true
-    name: npm_main
+  # main:
+  #   external: true
+  #   name: npm_main
 
 
 
