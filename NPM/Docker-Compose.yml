@@ -104,4 +104,4 @@ volumes:
 #                   so using the IP address 127.0.0.1 
 #                   will NOT refer to the host OS IP address, 
 #                   but the container’s internal address.
- #                       ufw allow [port]19999
+ #                       ufw allow 80,81,443,8183,9090,8090,8092,8094/tcp
