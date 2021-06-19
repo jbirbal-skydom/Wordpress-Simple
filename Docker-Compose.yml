@@ -178,20 +178,20 @@ services:
   #     - backend
 
 
-  db_skydom:
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_DATABASE: main
-      MYSQL_USER: Gp8Ajj4BmjXK6hq
-      MYSQL_PASSWORD: X9dZFKCJKLZ8acH
-      MYSQL_ROOT_PASSWORD: ZdVtdA+vWMyJjHY3
-    ports:
-      - 3306
-    volumes:
-      - db_skydom:/var/lib/mysql
-    networks:
-      - backend
+  # db_skydom:
+  #   image: mysql:5.7
+  #   restart: always
+  #   environment:
+  #     MYSQL_DATABASE: main
+  #     MYSQL_USER: Gp8Ajj4BmjXK6hq
+  #     MYSQL_PASSWORD: X9dZFKCJKLZ8acH
+  #     MYSQL_ROOT_PASSWORD: ZdVtdA+vWMyJjHY3
+  #   ports:
+  #     - 3306
+  #   volumes:
+  #     - db_skydom:/var/lib/mysql
+  #   networks:
+  #     - backend
   
 
   # phpmyadmin:

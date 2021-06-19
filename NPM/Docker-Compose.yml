@@ -57,8 +57,8 @@ services:
       # These are the settings to access your db
       DB_MYSQL_HOST: "db_npm"
       DB_MYSQL_PORT: 3306
-      DB_MYSQL_USER: "tObnIpviBKxCZNItCrpk"
-      DB_MYSQL_PASSWORD: "WLdwSNvakUTzTHKTyvUt"
+      DB_MYSQL_USER: "Gp8Ajj4BmjXK6hq"
+      DB_MYSQL_PASSWORD: "X9dZFKCJKLZ8acH"
       DB_MYSQL_NAME: "npm"
       # If you would rather use Sqlite uncomment this
       # and remove all DB_MYSQL_* lines above
@@ -69,7 +69,7 @@ services:
       - data_npm:/data
       - letsencrypt_npm:/etc/letsencrypt
     depends_on:
-      - db_npm
+      - db_skydom
     networks:
       - frontend
       - backend
@@ -78,22 +78,24 @@ services:
 
 
 
-  db_npm:
+  db_skydom:
     image: 'jc21/mariadb-aria:latest'
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 'NyoaApFjsiinakhCXuSK'
       MYSQL_DATABASE: 'npm'
-      MYSQL_USER: 'tObnIpviBKxCZNItCrpk'
-      MYSQL_PASSWORD: 'WLdwSNvakUTzTHKTyvUt'
+      MYSQL_USER: 'Gp8Ajj4BmjXK6hq'
+      MYSQL_PASSWORD: 'X9dZFKCJKLZ8acH'
     volumes:
       -  db_npm:/var/lib/mysql
     networks:
       - backend
+    ports:
+      - 3306:3306
 
 
 volumes:
-    db_npm:
+    db_skydom:
     data_npm:
     letsencrypt_npm:
     # netdataconfig:
@@ -104,4 +106,4 @@ volumes:
 #                   so using the IP address 127.0.0.1 
 #                   will NOT refer to the host OS IP address, 
 #                   but the container’s internal address.
- #                       ufw allow 80,81,443,8183,9090,8090,8092,8094/tcp
+ #                       ufw allow 80,81,443,3306,8183,9080,8090,8092,8094/tcp
