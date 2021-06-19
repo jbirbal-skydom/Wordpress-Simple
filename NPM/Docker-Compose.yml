@@ -87,7 +87,7 @@ services:
       MYSQL_USER: 'Gp8Ajj4BmjXK6hq'
       MYSQL_PASSWORD: 'X9dZFKCJKLZ8acH'
     volumes:
-      -  db_npm:/var/lib/mysql
+      -  db_skydom:/var/lib/mysql
     networks:
       - backend
     ports:
