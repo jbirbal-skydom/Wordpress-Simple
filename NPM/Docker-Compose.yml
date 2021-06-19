@@ -55,7 +55,7 @@ services:
       # - '21:21' # FTP
     environment:
       # These are the settings to access your db
-      DB_MYSQL_HOST: "db_npm"
+      DB_MYSQL_HOST: "db_skydom"
       DB_MYSQL_PORT: 3306
       DB_MYSQL_USER: "Gp8Ajj4BmjXK6hq"
       DB_MYSQL_PASSWORD: "X9dZFKCJKLZ8acH"
