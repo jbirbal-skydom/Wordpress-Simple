@@ -213,9 +213,9 @@ volumes:
   landing:
   cnc:
   shop:
-  learn:
-  project:
-  db_skydom:
+  #learn:
+  #project:
+  #db_skydom:
 
 
 
