@@ -29,11 +29,11 @@ services:
       WORDPRESS_AUTH_KEY:         'WK(XK:*^CS.[bRz6/ur|&V+l7[Dy9Bg.QBsutc%/v5jx1p}P^))f.{Vj%K+x(HbI'
       WORDPRESS_SECURE_AUTH_KEY:  '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
       WORDPRESS_LOGGED_IN_KEY:    'SD6+~7l02u5AI[1.n?&f3^S,>it,2xi)4jg*k&[-3YiQgF7F<Pb=m|Ga5R&w[@^w'
-      WORDPRESS_NONCE_KEY:        '![a~ECE# |H]P0]l+fVXk*V%f|f@suB3E)-+r7Vwo2f(HQ`U87Z79Hc*tu.tC+($'
+      WORDPRESS_NONCE_KEY:        'oQ7[9Q?mZzxcKmxS9a=08Bg|>U.Umt8SOeS%ts55HprtHDQ/B8Ni%oTtICDN]YSJ'
       WORDPRESS_AUTH_SALT:        'SnX18AytTW^e1,3<8Xd6l1xk=>#xoY~Q[zg*xIaV4DGJy!S>cg7_vukqZ4=@qxL+'
       WORDPRESS_SECURE_AUTH_SALT: 'B~!Czyl|R`s$QX^p=,+KcqgV1B-?$D`KX5H{_lx<Q*Sc]>+kPAK4F(}4H*BjW4[s'
       WORDPRESS_LOGGED_IN_SALT:   '@#@31BZ-5g<t:aZr[@%(k/1/pKr7EaJQ/OLebjPIfokZuc)RN1Lw,&!2?5:Zq`Ea'
-      WORDPRESS_NONCE_SALT:       'ls| z%TEiAz#H<[2]2HPj=y5g1,[Xt3!T*lro3!Y6uvcVMsl3:]O f42|I@Fc|MJ'
+      WORDPRESS_NONCE_SALT:       '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
       WORDPRESS_CONFIG_EXTRA: 
         # define('CUSTOM_USER_TABLE', 'landing_users');
         # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
@@ -100,11 +100,11 @@ services:
       WORDPRESS_AUTH_KEY:         'WK(XK:*^CS.[bRz6/ur|&V+l7[Dy9Bg.QBsutc%/v5jx1p}P^))f.{Vj%K+x(HbI'
       WORDPRESS_SECURE_AUTH_KEY:  '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
       WORDPRESS_LOGGED_IN_KEY:    'SD6+~7l02u5AI[1.n?&f3^S,>it,2xi)4jg*k&[-3YiQgF7F<Pb=m|Ga5R&w[@^w'
-      WORDPRESS_NONCE_KEY:        '![a~ECE# |H]P0]l+fVXk*V%f|f@suB3E)-+r7Vwo2f(HQ`U87Z79Hc*tu.tC+($'
+      WORDPRESS_NONCE_KEY:        'oQ7[9Q?mZzxcKmxS9a=08Bg|>U.Umt8SOeS%ts55HprtHDQ/B8Ni%oTtICDN]YSJ'
       WORDPRESS_AUTH_SALT:        'SnX18AytTW^e1,3<8Xd6l1xk=>#xoY~Q[zg*xIaV4DGJy!S>cg7_vukqZ4=@qxL+'
       WORDPRESS_SECURE_AUTH_SALT: 'B~!Czyl|R`s$QX^p=,+KcqgV1B-?$D`KX5H{_lx<Q*Sc]>+kPAK4F(}4H*BjW4[s'
       WORDPRESS_LOGGED_IN_SALT:   '@#@31BZ-5g<t:aZr[@%(k/1/pKr7EaJQ/OLebjPIfokZuc)RN1Lw,&!2?5:Zq`Ea'
-      WORDPRESS_NONCE_SALT:       'ls| z%TEiAz#H<[2]2HPj=y5g1,[Xt3!T*lro3!Y6uvcVMsl3:]O f42|I@Fc|MJ'
+      WORDPRESS_NONCE_SALT:       '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
       WORDPRESS_CONFIG_EXTRA: 
         # define('CUSTOM_USER_TABLE', 'landing_users');
         # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
