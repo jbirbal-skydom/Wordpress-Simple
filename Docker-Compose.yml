@@ -14,40 +14,40 @@ networks:
 
 services:
 
-  landing_wordpress:
-    container_name: vib_home
-    image: wordpress
-    restart: always
-    ports:
-      - 5090:80
-    environment:
-      WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: 'Gp8Ajj4BmjXK6hq'
-      WORDPRESS_DB_PASSWORD: 'X9dZFKCJKLZ8acH'
-      WORDPRESS_DB_NAME: 'vibrant'
-      WORDPRESS_TABLE_PREFIX: 'vibrant_landing_'
-      WORDPRESS_AUTH_KEY:         'WK(XK:*^CS.[bRz6/ur|&V+l7[yy9Bg.QBsutc%/v5jx1p}P^))f.{Vj%K+x(HbI'
-      WORDPRESS_SECURE_AUTH_KEY:  '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
-      WORDPRESS_LOGGED_IN_KEY:    'SD6+~7l02u5AI[1.n?&f3^S,>it,2xi)4jg*k&[-3YiQgF7F<Pb=m|Ga5R&w[@^w'
-      WORDPRESS_NONCE_KEY:        'oQ7[9Q?mZzxcKmxS9a=08Bg|>U.Umt8SOeS%ts55HprtHtQ/B8Ni%oTtICuN]YSJ'
-      WORDPRESS_AUTH_SALT:        'SnX18AytTW^e1,3<8Xd6l1xk=>#xoY~Q[zg*xIaV4RGJy!S>cg7_vukqZ4=@pxL+'
-      WORDPRESS_SECURE_AUTH_SALT: '|{iW`%:sc@+@24VJ4|3r.C1uoiS}zZ0xc@Q-%+}},FsmP+nq6n-ij9F;P2xypQNe'
-      WORDPRESS_LOGGED_IN_SALT:   '@#@31BZ-5g<t:aZr[@%(k/1/pKr7EaJQ/OLebjPIfokZuc)RN1Lw,&!2?5:Zq`Ea'
-      WORDPRESS_NONCE_SALT:       '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
-      WORDPRESS_CONFIG_EXTRA: 
-        # define('CUSTOM_USER_TABLE', 'landing_users');
-        # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
-        # define( 'COOKIE_DOMAIN', 'srd-test.ml' ); 
-        # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
-        # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
-        # define( ‘COOKIEPATH’, ‘/’ );
-        # define( ‘SITECOOKIEPATH’, ‘/’ );
-    volumes:  
-     - vib_landing:/var/www/html
-    # - ./html:/var/www/html/
-    networks:
-      - frontend
-      - backend
+  # landing_wordpress:
+  #   container_name: vib_home
+  #   image: wordpress
+  #   restart: always
+  #   ports:
+  #     - 5090:80
+  #   environment:
+  #     WORDPRESS_DB_HOST: db_skydom
+  #     WORDPRESS_DB_USER: 'Gp8Ajj4BmjXK6hq'
+  #     WORDPRESS_DB_PASSWORD: 'X9dZFKCJKLZ8acH'
+  #     WORDPRESS_DB_NAME: 'vibrant'
+  #     WORDPRESS_TABLE_PREFIX: 'vibrant_landing_'
+  #     WORDPRESS_AUTH_KEY:         'WK(XK:*^CS.[bRz6/ur|&V+l7[yy9Bg.QBsutc%/v5jx1p}P^))f.{Vj%K+x(HbI'
+  #     WORDPRESS_SECURE_AUTH_KEY:  '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
+  #     WORDPRESS_LOGGED_IN_KEY:    'SD6+~7l02u5AI[1.n?&f3^S,>it,2xi)4jg*k&[-3YiQgF7F<Pb=m|Ga5R&w[@^w'
+  #     WORDPRESS_NONCE_KEY:        'oQ7[9Q?mZzxcKmxS9a=08Bg|>U.Umt8SOeS%ts55HprtHtQ/B8Ni%oTtICuN]YSJ'
+  #     WORDPRESS_AUTH_SALT:        'SnX18AytTW^e1,3<8Xd6l1xk=>#xoY~Q[zg*xIaV4RGJy!S>cg7_vukqZ4=@pxL+'
+  #     WORDPRESS_SECURE_AUTH_SALT: '|{iW`%:sc@+@24VJ4|3r.C1uoiS}zZ0xc@Q-%+}},FsmP+nq6n-ij9F;P2xypQNe'
+  #     WORDPRESS_LOGGED_IN_SALT:   '@#@31BZ-5g<t:aZr[@%(k/1/pKr7EaJQ/OLebjPIfokZuc)RN1Lw,&!2?5:Zq`Ea'
+  #     WORDPRESS_NONCE_SALT:       '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
+  #     WORDPRESS_CONFIG_EXTRA: 
+  #       # define('CUSTOM_USER_TABLE', 'landing_users');
+  #       # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
+  #       # define( 'COOKIE_DOMAIN', 'srd-test.ml' ); 
+  #       # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
+  #       # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
+  #       # define( ‘COOKIEPATH’, ‘/’ );
+  #       # define( ‘SITECOOKIEPATH’, ‘/’ );
+  #   volumes:  
+  #    - vib_landing:/var/www/html
+  #   # - ./html:/var/www/html/
+  #   networks:
+  #     - frontend
+  #     - backend
 
 
 
