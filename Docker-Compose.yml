@@ -20,10 +20,10 @@ services:
     ports:
       - 9080:80
     environment:
-      WORDPRESS_DB_HOST: db_skydom
+      WORDPRESS_DB_HOST: 'db_skydom'
       WORDPRESS_DB_USER: 'Gp8Ajj4BmjXK6hq'
       WORDPRESS_DB_PASSWORD: 'X9dZFKCJKLZ8acH'
-      WORDPRESS_DB_NAME: RHS
+      WORDPRESS_DB_NAME: 'RHS'
       WORDPRESS_TABLE_PREFIX: 'RHS_'
       WORDPRESS_AUTH_KEY:         'YQPf2!e/;}79GD6BED#9t( +=Nrt>3v.a&,.f~-b_5y<2>?D-NJ,DrOZwPCx6<>>'
       WORDPRESS_SECURE_AUTH_KEY:  'i8[_~:;#C7oE+nU`.GS/Ur%lVi)%>QZ&OAyJSDgZy/g|,7jGp^Vo3m],b+?X,ZF*'
