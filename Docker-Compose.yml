@@ -27,7 +27,7 @@ services:
       WORDPRESS_DB_NAME: vibrant
       WORDPRESS_TABLE_PREFIX: 'landing_'
       WORDPRESS_AUTH_KEY:         'WK(XK:*^CS.[bRz6/ur|&V+l7[Dy9Bg.QBsutc%/v5jx1p}P^))f.{Vj%K+x(HbI'
-      WORDPRESS_SECURE_AUTH_KEY:  '~pO+.ktwwq<7=|z%y^~:S0tWI=L}DC[h|+5 Jb1d%$<k^7>=^DMMAzn?.rDA<I}^'
+      WORDPRESS_SECURE_AUTH_KEY:  '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
       WORDPRESS_LOGGED_IN_KEY:    'SD6+~7l02u5AI[1.n?&f3^S,>it,2xi)4jg*k&[-3YiQgF7F<Pb=m|Ga5R&w[@^w'
       WORDPRESS_NONCE_KEY:        '![a~ECE# |H]P0]l+fVXk*V%f|f@suB3E)-+r7Vwo2f(HQ`U87Z79Hc*tu.tC+($'
       WORDPRESS_AUTH_SALT:        'SnX18AytTW^e1,3<8Xd6l1xk=>#xoY~Q[zg*xIaV4DGJy!S>cg7_vukqZ4=@qxL+'
@@ -98,7 +98,7 @@ services:
       WORDPRESS_DB_NAME: vibrant
       WORDPRESS_TABLE_PREFIX: shop_
       WORDPRESS_AUTH_KEY:         'WK(XK:*^CS.[bRz6/ur|&V+l7[Dy9Bg.QBsutc%/v5jx1p}P^))f.{Vj%K+x(HbI'
-      WORDPRESS_SECURE_AUTH_KEY:  '~pO+.ktwwq<7=|z%y^~:S0tWI=L}DC[h|+5 Jb1d%$<k^7>=^DMMAzn?.rDA<I}^'
+      WORDPRESS_SECURE_AUTH_KEY:  '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
       WORDPRESS_LOGGED_IN_KEY:    'SD6+~7l02u5AI[1.n?&f3^S,>it,2xi)4jg*k&[-3YiQgF7F<Pb=m|Ga5R&w[@^w'
       WORDPRESS_NONCE_KEY:        '![a~ECE# |H]P0]l+fVXk*V%f|f@suB3E)-+r7Vwo2f(HQ`U87Z79Hc*tu.tC+($'
       WORDPRESS_AUTH_SALT:        'SnX18AytTW^e1,3<8Xd6l1xk=>#xoY~Q[zg*xIaV4DGJy!S>cg7_vukqZ4=@qxL+'
