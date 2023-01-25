@@ -95,7 +95,7 @@ services:
       WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
       WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
-      WORDPRESS_DB_NAME: main
+      WORDPRESS_DB_NAME: vibrant
       WORDPRESS_TABLE_PREFIX: shop_
       WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
       WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
