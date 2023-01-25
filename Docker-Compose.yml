@@ -43,7 +43,7 @@ services:
         # define( ‘COOKIEPATH’, ‘/’ );
         # define( ‘SITECOOKIEPATH’, ‘/’ );
     volumes:  
-     - landing:/var/www/html
+     - vib_landing:/var/www/html
     # - ./html:/var/www/html/
     networks:
       - frontend
@@ -114,7 +114,7 @@ services:
         # define( ‘COOKIEPATH’, ‘/’ );
         # define( ‘SITECOOKIEPATH’, ‘/’ );
     volumes:
-      - shop:/var/www/html
+      - vib_shop:/var/www/html
     # - ./html:/var/www/html/
     networks:
       - frontend
@@ -212,9 +212,9 @@ services:
 
 
 volumes:
-  landing:
+  vib_landing:
   # cnc:
-  shop:
+  vib_shop:
   #learn:
   #project:
   #db_skydom:
