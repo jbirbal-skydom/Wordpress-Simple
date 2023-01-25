@@ -1,0 +1,273 @@
+mkdir docker
+cd docker/
+mkdir skydom
+cd skydom/
+sudo apt update
+sudo apt upgrade
+sudo apt-get install git
+git clone git@github.com:jbirbal-skydom/Wordpress-Simple.git -b Skydom
+ssh-keygen -t ed25519 -C "skydom@zoho.com"
+git clone git@github.com:jbirbal-skydom/Wordpress-Simple.git -b Skydom
+eval "$(ssh-agent -s)"
+cd ~
+ls
+cd ls -a
+ls -a
+cd .ssh/
+ls
+ssh-add -K ~/.ssh/id_ed25519
+ssh-add -k ~/.ssh/id_ed25519
+cd ~/docker/skydom/
+git clone git@github.com:jbirbal-skydom/Wordpress-Simple.git -b Skydom
+cd ~/.ssh/
+nano id_ed25519.pub 
+echo id_ed25519.pub 
+cat id_ed25519.pub 
+cd ~/docker/skydom/
+git clone git@github.com:jbirbal-skydom/Wordpress-Simple.git -b Skydom
+cd Wordpress-Simple/
+sudo ufw allow 80,81,443,8183,90908
+ufw
+sudo ufw allow 80,81,443,8183,9090,8090,8092,8094
+ufw allow 80,81,443,8183,9090,8090,8092,8094
+ufw allow 80,81,44
+docker-compose -f Docker-Compose.yml up --build -d
+cd NPM/
+docker-compose -f Docker-Compose.yml up --build -d
+cd ../
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down
+docker-compose -f Docker-Compose.yml up --build -d -p skydom
+clear
+docker-compose -f Docker-Compose.yml up --build -d
+cd ../
+mkdir rhs
+cd rhs/
+git clone git@github.com:jbirbal-skydom/Wordpress-Simple.git -b RHS2012
+cd Wordpress-Simple/
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down
+ufw allow 9036
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down
+sudo reboot
+cd docker/skydom/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml up --build -d
+cd ~/docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml up --build -d
+cd docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down
+nano Docker-Compose.yml 
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down
+ufw allow 9036
+nano Docker-Compose.yml 
+ufw allow 9080
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down
+cd ~/docker/skydom/Wordpress-Simple/NPM/
+docker-compose -f Docker-Compose.yml down
+cd ../
+docker-compose -f Docker-Compose.yml down
+cd NPM/
+docker-compose -f Docker-Compose.yml up --build -d
+cd ../
+docker-compose -f Docker-Compose.yml up --build -d
+cd ~/docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml up --build -d
+top -c
+cd ~/docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down
+top -c
+cd ~/docker/rhs/Wordpress-Simple/
+cd ../
+rm -r Wordpress-Simple/
+git clone git@github.com:jbirbal-skydom/Wordpress-Simple.git -b RHS2012
+cd Wordpress-Simple/
+docker-compose -f Docker-Compose.yml up --build -d
+top -c
+cd ~/docker/skydom/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down
+docker-compose -f Docker-Compose.yml up --build -d
+top -c
+cd ~/docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down
+cd ../
+rm -r Wordpress-Simple/
+git clone git@github.com:jbirbal-skydom/Wordpress-Simple.git -b RHS2012
+cd Wordpress-Simple/
+docker-compose -f Docker-Compose.yml up --build -d
+top -c
+cd ~/docker/skydom/
+Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down
+cd Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down
+cd ../
+rm -r Wordpress-Simple/
+git clone git@github.com:jbirbal-skydom/Wordpress-Simple.git -b Skydom
+docker-compose -f Docker-Compose.yml up --build -d
+cd Wordpress-Simple/
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down -v
+cd Wordpress-Simple/cd NPM/
+cd  NPM/
+docker-compose -f Docker-Compose.yml down -v
+cd ~/docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down -v
+cd ~/docker/skydom/Wordpress-Simple/NPM/
+docker-compose -f Docker-Compose.yml down -v
+cd ../../
+rm -r Wordpress-Simple/
+git clone git@github.com:jbirbal-skydom/Wordpress-Simple.git -b Skydom
+cd Wordpress-Simple/NPM/
+docker-compose -f Docker-Compose.yml up --build -d
+cd ../../
+rm -r Wordpress-Simple/
+git clone git@github.com:jbirbal-skydom/Wordpress-Simple.git -b Skydom
+cd Wordpress-Simple/NPM/
+docker-compose -f Docker-Compose.yml up --build -d
+cd ../
+docker-compose -f Docker-Compose.yml up --build -d
+cd ~/docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml up --build -d
+exit
+cd ~
+ls
+exit
+docker ps
+nano
+exit
+ls
+docker ps
+ls
+cd ~./ssh
+cd ~.\ssh
+cd docker/
+ls
+cd skydom/
+ls
+cd Wordpress-Simple/
+ls
+nano Docker-Compose.yml 
+docker ps
+cd ../../
+ls
+cd rhs/
+ls
+cd Wordpress-Simple/
+ls
+nano Docker-Compose.yml 
+cd ../../skydom/Wordpress-Simple/
+nano Docker-Compose.yml 
+cd docker/skydom/Wordpress-Simple/
+ls
+cd NPM/
+docker-compose -f Docker-Compose.yml up --build -d
+docker ps
+cd docker/rhs/
+docker-compose -f Docker-Compose.yml down -v
+cd Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down -v
+docker system prune -a
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down -v
+docker volume ls -f dangling=true
+local     wordpress-simple_learn
+docker volume prune
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down -v
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down -v
+docker volume ls -f dangling=true
+docker system prune -a
+docker-compose -f Docker-Compose.yml up --build -d
+cd docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down -v
+nano Docker-Compose.yml 
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down -v
+nano Docker-Compose.yml 
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down -v
+nano Docker-Compose.yml 
+docker-compose -f Docker-Compose.yml up --build -d
+Docker ps  –a
+docker ps  –a
+docker ps
+docker exec –it c9ae120a64a5 bash
+sudo su
+Docker Info
+docker Info
+dockeriInfo
+docker info
+docker exec –it c9ae120a64a5 bash
+docker exec c9ae120a64a5 bash
+docker exec -it c9ae120a64a5 bash
+docker-compose -f Docker-Compose.yml down -v
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down -v
+docker-compose -f Docker-Compose.yml up --build -d
+docker exec -it c9ae120a64a5 bash
+docker ps
+docker exec -it b2cae2d988db bash
+cd docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down -v
+docker-compose -f Docker-Compose.yml up --build -d
+cd docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down -v
+docker-compose -f Docker-Compose.yml up --build -d
+docker ps
+docker exec -it bd79958f3a1e bash
+cd docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down -v
+docker-compose -f Docker-Compose.yml up --build -d
+docker-compose -f Docker-Compose.yml down -v
+docker-compose -f Docker-Compose.yml up --build -d
+docker ps
+docker exec -it c3ff83b8c430 bash
+cd docker/rhs/Wordpress-Simple/
+docker-compose -f Docker-Compose.yml down
+docker-compose -f Docker-Compose.yml up --build -d
+docker ps
+docker exec -it aaec1f0fbbd3 bash
+docker-compose -f Docker-Compose.yml down
+docker-compose -f Docker-Compose.yml up -d
+exite
+exit
+ip addr
+ls
+cd docker/
+ls
+cd rhs/
+ls
+cd Wordpress-Simple/
+ls
+docker -ps
+docker ps -a
+docker exec -u 0 -it c897cba1aff8 /bin/bash
+docker ps -a
+ls
+cd docker/
+ls
+cd rhs/
+ls
+cd Wordpress-Simple/
+ls
+nano Docker-Compose.yml 
+docker-compose -f Docker-Compose.yml down -v
+docker-compose -f Docker-Compose.yml up -d
+docker ps -a
+docker exec -it 56c65dfd18d1 /bin/bash
+exit
+docker exec -it 56c65dfd18d1 /bin/bash
+exit
+docker exec -it 56c65dfd18d1 /bin/bash
+docker exec -u 0 -it 56c65dfd18d1 /bin/bash
+exit
+docker exec -u 0 -it 56c65dfd18d1 /bin/bash
+exit
+docker exec -u 0 -it 56c65dfd18d1 /bin/bash
+exit
+docker exec -u 0 -it 56c65dfd18d1 /bin/bash
+ls
