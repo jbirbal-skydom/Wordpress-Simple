@@ -24,7 +24,7 @@ services:
       WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: 'Gp8Ajj4BmjXK6hq'
       WORDPRESS_DB_PASSWORD: 'X9dZFKCJKLZ8acH'
-      WORDPRESS_DB_NAME: vibrant
+      WORDPRESS_DB_NAME: 'vibrant'
       WORDPRESS_TABLE_PREFIX: 'landing_'
       WORDPRESS_AUTH_KEY:         'WK(XK:*^CS.[bRz6/ur|&V+l7[yy9Bg.QBsutc%/v5jx1p}P^))f.{Vj%K+x(HbI'
       WORDPRESS_SECURE_AUTH_KEY:  '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
@@ -95,7 +95,7 @@ services:
       WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: 'Gp8Ajj4BmjXK6hq'
       WORDPRESS_DB_PASSWORD: 'X9dZFKCJKLZ8acH'
-      WORDPRESS_DB_NAME: vibrant
+      WORDPRESS_DB_NAME: 'vibrant'
       WORDPRESS_TABLE_PREFIX: shop_
       WORDPRESS_AUTH_KEY:         'WK(XK:*^CS.[bRz6/ur|&V+l7[yy9Bg.QBsutc%/v5jx1p}P^))f.{Vj%K+x(HbI'
       WORDPRESS_SECURE_AUTH_KEY:  '1P|+z#fOsx9Z6;Yg3OuQTlzOXKNqwM,+cJ:_WHR!>T=C=k)yX:>|TypEiZ&)untq'
