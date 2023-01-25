@@ -56,7 +56,7 @@ services:
     image: wordpress:latest
     restart: always
     ports:
-      - 5094:80
+      - 5096:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: 'Gp8Ajj4BmjXK6hq'
