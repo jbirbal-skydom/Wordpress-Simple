@@ -15,6 +15,7 @@ networks:
 services:
 
   landing_wordpress:
+    container_name: vib_home
     image: wordpress
     restart: always
     ports:
@@ -85,6 +86,7 @@ services:
 
 
   shop_wordpress:
+    container_name: vib_shop
     image: wordpress
     restart: always
     ports:
