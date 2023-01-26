@@ -1,45 +1,92 @@
 version: '3.1'
-#test
+networks:
+  frontend:
+    external: true
+    name: npm_frontend
+  backend:
+    external: true
+    name: npm_backend
+  # main:
+  #   external: true
+  #   name: npm_main
+
+
+
 services:
 
-  wordpress:
+  RHS_wordpress:
     image: wordpress
     restart: always
     ports:
-      - 8080:80
+      - 9080:80
     environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
-    volumes:
-      # - wordpress:/var/www/html
-     - ./html:/var/www/html/
+      WORDPRESS_DB_HOST: db_skydom:3306
+      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
+      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
+      WORDPRESS_DB_NAME: RHS
+      WORDPRESS_TABLE_PREFIX: RHS_
+      WORDPRESS_AUTH_KEY:         'YQPf2!e/;}79GD6BED#9t( +=Nrt>3v.a&,.f~-b_5y<2>?D-NJ,DrOZwPCx6<>>'
+      WORDPRESS_SECURE_AUTH_KEY:  'i8[_~:;#C7oE+nU`.GS/Ur%lVi)%>QZ&OAyJSDgZy/g|,7jGp^Vo3m],b+?X,ZF*'
+      WORDPRESS_LOGGED_IN_KEY:    'OTyJ9u#||b~P:NU1kvWU&|.2+b![/h{<#?C~Q0?g-lJR.T@+sT4/h;*cjoQDtTum'
+      WORDPRESS_NONCE_KEY:        'xr`W08|T|I-5.+O~6fb|Me~x#PWTR{LSa+]_1bv4.9G|o}<`PKZQmMj[Fo5BhScM'
+      WORDPRESS_AUTH_SALT:        'NMuGTC79C5a;_fK,/K{D{8VV6d0Y#yZR~{WbBG)x@Xiuo7QH~/bhKV)9>u[.5oHV'
+      WORDPRESS_SECURE_AUTH_SALT: 'x4}y.v`}%d,PNp`ue+*,eyrbWQcEKL%@f! T2a;ILqtj~]L)+QL~*MtBMgCrj1zg'
+      WORDPRESS_LOGGED_IN_SALT:   '`.3`cCsHIPmr UaESje[2t%=xo!{xE-?4r-1IxVcuP}2dWl(L,lvC>*3BbT|2{EA'
+      WORDPRESS_NONCE_SALT:       'aRB*|ghSkr`H<fV]2kT19PAH9i;1T ;}<MVCO{`]gP|p*E`W.v/xZ3_|xBd^~%H;'
+      WORDPRESS_CONFIG_EXTRA:
+        define( 'WP_HOME', 'https://RHS2012.com' );
+        
+        define( 'WP_SITEURL', 'https://RHS2012.com' );
+        
+      
+        # define('CUSTOM_USER_TABLE', 'landing_users');
+        # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
+        # define( 'COOKIE_DOMAIN', 'srd-test.ml' ); 
+        # define( 'COOKIEHASH', md5( 'http://srd-test.ml' ) ); 
+        # define( ‘ADMIN_COOKIE_PATH’, ‘/’ );
+        # define( ‘COOKIEPATH’, ‘/’ );
+        # define( ‘SITECOOKIEPATH’, ‘/’ );
+    volumes:  
+     - RHS:/var/www/html
+    # - ./html:/var/www/html/
+    networks:
+      - frontend
+      - backend
 
-  db:
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
-      MYSQL_RANDOM_ROOT_PASSWORD: '1'
-    ports:
-      - 3306
-    volumes:
-      - db:/var/lib/mysql
 
-  phpmyadmin:
-    image: phpmyadmin
-    restart: always
-    depends_on:
-      - db
-    environment:
-      PMA_ARBITRARY: 1
-    ports:
-      - 8183:80
+  
+
+
+  #db_RHS:
+    #image: mysql:5.7
+    #restart: always
+    #environment:
+     # MYSQL_DATABASE: main
+     # MYSQL_USER: 'IVvuAKeoJ42ndBsW6'
+     # MYSQL_PASSWORD: 'SnJzbd2hQwVboQo'
+     # MYSQL_RANDOM_ROOT_PASSWORD: 'iritFDqKK7wYg'
+   # ports:
+     # - 9036:3306
+   # volumes:
+     # - db_RHS:/var/lib/mysql
+   # networks:
+     # - backend
+  
 
 volumes:
-  # wordpress:
-  db:
+  RHS:
+ # db_RHS:
+
+
+
     # start with: docker-compose -f stack.yml up
+
+    # copy files to PC 
+    #docker cp wordpress-simple_landing_wordpress_1:/var/www/html Landing\  
+    #docker cp wordpress-simple_project_wordpress_1:/var/www/html Project\  
+    #docker cp wordpress-simple_learn_wordpress_1:/var/www/html Learn\  
+    #docker cp wordpress-simple_shop_wordpress_1:/var/www/html Shop\ 
+    #docker cp wordpress-simple_cnc_wordpress_1:/var/www/html CNC\  
+
+   
+
