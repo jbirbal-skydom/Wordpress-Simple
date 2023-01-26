@@ -2,8 +2,10 @@ version: "3.1"
 
 networks:
   frontend:
+    name: frontend
   backend:
-  main:
+    name: backend
+
 
 services:
   # netdata:
@@ -33,13 +35,15 @@ services:
   phpmyadmin:
       image: phpmyadmin
       restart: always
+      container_name: php
       environment:
         PMA_ARBITRARY: 1
+        MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
       ports:
         - 8183:80
       networks:
         - backend
-        - main
+
   
   npm:
     image: 'jc21/nginx-proxy-manager:latest'
@@ -53,18 +57,19 @@ services:
       - '81:81'
       # Add any other Stream port you want to expose
       # - '21:21' # FTP
+    container_name: nginx
     environment:
       # These are the settings to access your db
-      DB_MYSQL_HOST: "db_skydom"
+      DB_MYSQL_HOST: db_skydom
       DB_MYSQL_PORT: 3306
-      DB_MYSQL_USER: "Gp8Ajj4BmjXK6hq"
-      DB_MYSQL_PASSWORD: "X9dZFKCJKLZ8acH"
-      DB_MYSQL_NAME: "npm"
+      DB_MYSQL_USER: "${DB_USER_NAME}"
+      DB_MYSQL_PASSWORD: "${DB_USER_PASSWORD}"
+      DB_MYSQL_NAME: "${DB_NAME}"
       # If you would rather use Sqlite uncomment this
       # and remove all DB_MYSQL_* lines above
       # DB_SQLITE_FILE: "/data/database.sqlite"
       # Uncomment this if IPv6 is not enabled on your host
-      DISABLE_IPV6: 'true'
+      # DISABLE_IPV6: 'true'
     volumes:
       - data_npm:/data
       - letsencrypt_npm:/etc/letsencrypt
@@ -73,7 +78,7 @@ services:
     networks:
       - frontend
       - backend
-      - main
+
 
 
 
@@ -81,11 +86,17 @@ services:
   db_skydom:
     image: 'jc21/mariadb-aria:latest'
     restart: always
+    container_name: db_skydom
+    command: [
+        '--default_authentication_plugin=mysql_native_password',
+        '--character-set-server=utf8mb4',
+        '--collation-server=utf8mb4_unicode_ci'
+    ]
     environment:
-      MYSQL_ROOT_PASSWORD: 'NyoaApFjsiinakhCXuSK'
-      MYSQL_DATABASE: 'npm'
-      MYSQL_USER: 'Gp8Ajj4BmjXK6hq'
-      MYSQL_PASSWORD: 'X9dZFKCJKLZ8acH'
+      MYSQL_DATABASE: "${DB_NAME}"
+      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+      MYSQL_USER: "${DB_USER_NAME}"
+      MYSQL_PASSWORD: "${DB_USER_PASSWORD}"
     volumes:
       -  db_skydom:/var/lib/mysql
     networks:
