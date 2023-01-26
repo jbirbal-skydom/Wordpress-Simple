@@ -271,3 +271,6 @@ docker exec -u 0 -it 56c65dfd18d1 /bin/bash
 exit
 docker exec -u 0 -it 56c65dfd18d1 /bin/bash
 ls
+sudo ufw allow http
+sudo ufw allow https
+docker-compose -f docker-compose.yml down -v
