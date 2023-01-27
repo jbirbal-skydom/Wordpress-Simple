@@ -21,18 +21,18 @@ services:
       - 8090:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
-      WORDPRESS_DB_USER: Gp8Ajj4BmjXK6hq
-      WORDPRESS_DB_PASSWORD: X9dZFKCJKLZ8acH
-      WORDPRESS_DB_NAME: main
-      WORDPRESS_TABLE_PREFIX: 'landing_'
-      WORDPRESS_AUTH_KEY:         '?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ'
-      WORDPRESS_SECURE_AUTH_KEY:  '}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3'
-      WORDPRESS_LOGGED_IN_KEY:    'tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0'
-      WORDPRESS_NONCE_KEY:        'PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7'
-      WORDPRESS_AUTH_SALT:        'rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk'
-      WORDPRESS_SECURE_AUTH_SALT: 'tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R'
-      WORDPRESS_LOGGED_IN_SALT:   '&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7'
-      WORDPRESS_NONCE_SALT:       'D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!'
+      WORDPRESS_DB_USER: "${DB_USER_NAME}"
+      WORDPRESS_DB_PASSWORD: "${DB_USER_PASSWORD}"
+      WORDPRESS_DB_NAME: skydom
+      WORDPRESS_TABLE_PREFIX: "landing_"
+      WORDPRESS_AUTH_KEY:         "?+ sY.Shz8I()q(X.Nl)we1_V9$$cV,unQ _Bs;Q_An:(Yu~SGmJnUDG8_yI#KGJ"
+      WORDPRESS_SECURE_AUTH_KEY:  "}SB*[W&M*WdU#S1sviFkb8t(Hjl xFXDiV]pS)31;XJv}p.Z-uta&!G-cBDO Xl3"
+      WORDPRESS_LOGGED_IN_KEY:    "tU?qcuhibwOJQi-|s=b `;%U?+pFWiV5-mZO|*2-er~GQ*CkAhgdmqt.2my![:p0"
+      WORDPRESS_NONCE_KEY:        "PjA.ts+TD@dA*dP`RL824YjpOiK7t03)V)_jI70+6/slA:c5rD<sAohMSdc(`1q7"
+      WORDPRESS_AUTH_SALT:        "rc,,`rdbiK&GS=:{}wTv0,kxP9iCX;PiZRePM,gYU1em54{r@aEmgB4Ejw,SYENk"
+      WORDPRESS_SECURE_AUTH_SALT: "tQ8S,WImT:.7!|5>-VArU{+f[H;}ahsyb-%njcpPfn={!X? o7EWaf_v]N .HH%R"
+      WORDPRESS_LOGGED_IN_SALT:   "&/>OkR4rn%*k.AQZ-b?QJ-74{p8vpMuD~+OjoJJ=iS2Dw;m+{BAA_61 9J]?lf>7"
+      WORDPRESS_NONCE_SALT:       "D{S`NvAIQ|V)U:vWU)~k>]mI]VMpC(>K[nq^t|pfWzq:[13oA%Opp4k)]y>BCu!"
       WORDPRESS_CONFIG_EXTRA: 
         # define('CUSTOM_USER_TABLE', 'landing_users');
         # define('CUSTOM_USERMETA_TABLE', 'landing_usermeta');
