@@ -31,6 +31,8 @@ services:
 
     volumes:
       - RHS:/var/www/html
+      - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+
     networks:
       - frontend
       - backend
