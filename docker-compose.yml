@@ -76,6 +76,7 @@ services:
         # define( ‘SITECOOKIEPATH’, ‘/’ );
     volumes:
       - vib_minds:/var/www/html
+      - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
     # - ./html:/var/www/html/
     networks:
       - frontend
