@@ -8,18 +8,18 @@ networks:
 
 services:
 
-  VibHome:
-    container_name: VibHome
+  TacoHome:
+    container_name: TacoHome
     image: wordpress
     restart: always
     ports:
-      - 9090:80
+      - 9070:80
     environment:
       WORDPRESS_DB_HOST: db_skydom
       WORDPRESS_DB_USER: "${DB_USER_NAME}"
       WORDPRESS_DB_PASSWORD: "${DB_USER_PASSWORD}"
-      WORDPRESS_DB_NAME: "vibrant"
-      WORDPRESS_TABLE_PREFIX: "sprouts_"
+      WORDPRESS_DB_NAME: "TacoHome"
+      WORDPRESS_TABLE_PREFIX: "taco_"
       WORDPRESS_AUTH_KEY:         "${WP_AUTK}"
       WORDPRESS_SECURE_AUTH_KEY:  "${WP_SECK}"
       WORDPRESS_LOGGED_IN_KEY:    "${WP_LOGK}"
