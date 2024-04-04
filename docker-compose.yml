@@ -37,7 +37,7 @@ services:
         # define( ‘COOKIEPATH’, ‘/’ );
         # define( ‘SITECOOKIEPATH’, ‘/’ );
     volumes:  
-     - vib_sprouts:/var/www/html
+     - TacoHome:/var/www/html
      - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
     # - ./html:/var/www/html/
     networks:
