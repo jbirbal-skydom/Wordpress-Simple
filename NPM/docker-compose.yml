@@ -33,16 +33,21 @@ services:
   #     - main
 
   phpmyadmin:
-      image: phpmyadmin
+      image: 'phpmyadmin:5.2.1'
       restart: always
       container_name: php
       environment:
-        PMA_ARBITRARY: 1
-        MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+        - PMA_ARBITRARY=1
+        - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+        - PMA_PORT=3306
+        - PMA_HOST=db_skydom
       ports:
         - 8183:80
       networks:
         - backend
+        - frontend
+      depends_on:
+        - db_skydom
 
   
   npm:
@@ -101,6 +106,7 @@ services:
       -  db_skydom:/var/lib/mysql
     networks:
       - backend
+      - frontend
     ports:
       - 3306:3306
 
